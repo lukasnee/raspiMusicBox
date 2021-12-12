@@ -1,0 +1,13 @@
+[Unit]
+Description =finger touch soundboard for Liepa
+
+[Service]
+Type = simple
+ExecStart = python /home/pi/git/raspiMusicBox/musicBox.py
+User = pi
+Restart = on-failure
+RestartSec = 5
+TimeoutStartSec = infinity
+
+[Install]
+WantedBy = multi-user.target
